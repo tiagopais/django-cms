@@ -16,9 +16,10 @@ var editPluginPopupCallbacks = {};
 		$('#id_{{ name }}').wymeditor({
 			lang: '{{ language }}',
 			skin: 'django',
-			skinPath: "{{ STATIC_URL }}cms/js/wymeditor/skins/django/",
+			skinPath: "{{ WYM_CMS_STATIC_URL }}cms/js/wymeditor/skins/django/",
 			updateSelector: 'input[type=submit],',
 			updateEvent: 'click',
+            basePath: '{{ WYM_CMS_STATIC_URL }}wymeditor/',
 			logoHtml: '',
 			toolsItems: [
 					{{ WYM_TOOLS }}

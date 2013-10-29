@@ -48,6 +48,7 @@ class WYMEditor(Textarea):
             'WYM_CLASSES': mark_safe(text_settings.WYM_CLASSES),
             'WYM_STYLES': mark_safe(text_settings.WYM_STYLES),
             'WYM_STYLESHEET': mark_safe(text_settings.WYM_STYLESHEET),
+            'WYM_CMS_STATIC_URL': mark_safe(text_settings.WYM_CMS_STATIC_URL),
             'installed_plugins': self.installed_plugins,
         }
         return mark_safe(render_to_string(

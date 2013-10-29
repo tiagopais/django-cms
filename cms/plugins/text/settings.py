@@ -59,6 +59,8 @@ WYM_STYLES = ",\n".join([
 WYM_CLASSES = getattr(settings, "WYM_CLASSES", WYM_CLASSES)
 WYM_STYLES = getattr(settings, "WYM_STYLES", WYM_STYLES)
 
+# The CMS Static URL to be used as the base for WYM include URLs
+WYM_CMS_STATIC_URL = getattr(settings, "WYM_CMS_STATIC_URL",  cms_static_url(''))
 #Advantageously replaces WYM_CLASSES and WYM_STYLES
 ##Prepare url for wymeditor.css
-WYM_STYLESHEET = getattr(settings, "WYM_STYLESHEET",  '"%s"' % cms_static_url('css/wymeditor.css'))
+WYM_STYLESHEET = getattr(settings, "WYM_STYLESHEET",  '"%scss/wymeditor.css"' % WYM_CMS_STATIC_URL)
